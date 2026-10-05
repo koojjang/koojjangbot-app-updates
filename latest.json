@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 11,
-  "versionName": "0.1.11",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-11.apk",
-  "releaseNotes": "걷기 크기 98% 보정. 앱 시작 및 설정에서 업데이트 확인. 터치 반응은 꺼져 있습니다.",
-  "sha256": "342e7fff4a1173a69d52dd1c77b06eaf4705f1fff19600acc283208618168ed8"
+  "versionCode": 14,
+  "versionName": "0.1.14",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-14.apk",
+  "releaseNotes": "설정에 뀨짱 크기 조절 추가: 50~150%, 실시간 반영, 자동 저장, 기본 크기로 복귀. 기존 걷기 크기 보정 유지.",
+  "sha256": "5e04a1a50f761b57d18eb6a5c3f3e9788b3b2c27d523a59438a9ed57fc5155e6"
 }
