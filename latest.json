@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 15,
-  "versionName": "0.1.15",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-15.apk",
-  "releaseNotes": "폰 화면에 띄우기 추가: 다른 앱 위에서 서기/걷기, 드래그 이동, 앱 및 알림에서 끄기. 크기 설정 공유, 화면 잠금 시 숨김.",
-  "sha256": "f53997b534cfa68f9458fd9e82469dd1caf125a48de290e7cdc158ccb2f7b6f3"
+  "versionCode": 16,
+  "versionName": "0.1.16",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-16.apk",
+  "releaseNotes": "화면 잠금 해제 뒤 캐릭터 복귀 처리 보완. 화면 이동을 디스플레이 프레임에 동기화하고 불필요한 창/그림 갱신 감소. 걷기 그림 전환은 기존 0.5초 유지.",
+  "sha256": "33982f8d1a6f9c747fb984c52c31ce76bc446f0816e88615cda564c14c212d25"
 }
