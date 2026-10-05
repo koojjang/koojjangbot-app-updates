@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 18,
-  "versionName": "0.1.18",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-18.apk",
-  "releaseNotes": "스탠딩 눈 깜빡임 추가: 3~7초 랜덤 대기, 한 번 70%/두 번 30%. 방과 HUD 크기를 HUD 기준으로 통일, 기존 크기 설정 보존. 앱 이름 및 문구를 쿠짱으로 변경.",
-  "sha256": "a33e8728fe61493c8737d8c1dbc2950fabb3d22b59e43e308c59be582dab7ddd"
+  "versionCode": 19,
+  "versionName": "0.1.19",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-19.apk",
+  "releaseNotes": "고정1/고정2 추가: 더블탭으로 앉기/일어나기, 앉은 채 드래그. 스탠딩과 같은 깜빡임. 최대 고정 시간 1~10분/무제한, 기본5분. 화면 꺼짐 포함 실제 경과 시간으로 자동 해제.",
+  "sha256": "c6ebc2b6abeecca9dbc2fd54076d07b270624f2c130f4637e3e93a4500867bc9"
 }

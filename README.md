@@ -2,9 +2,9 @@
 
 공개 APK와 최신 버전 정보만 보관하는 배포 저장소입니다.
 
-[최신 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-18.apk)
+[최신 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-19.apk)
 
-현재 버전: 0.1.18 (versionCode 18)
+현재 버전: 0.1.19 (versionCode 19)
 
 앱은 실행 시와 설정의 **업데이트 확인** 버튼으로 `latest.json`을 확인합니다. 새 버전이 있으면 다운로드 안내가 표시됩니다. 다운로드 후 Android 설치 화면에서 직접 설치합니다.
 
@@ -21,3 +21,5 @@ APK를 먼저 업로드하고 다운로드 가능 여부를 확인한 뒤 `lates
 0.1.16: 화면 잠금 해제 후 표시 복구 보완, 위치 갱신을 화면 프레임에 동기화하고 불필요한 갱신 감소.
 
 0.1.18: 스탠딩 눈 깜빡임(3~7초 대기, 두 번 30%). 방/HUD 공통 120dp 기본 크기. 저장된 크기 % 유지. 앱 표시 이름 쿠짱.
+
+0.1.19: 고정1/고정2. 더블탭 고정/해제, 고정 중 드래그 및 동일 깜빡임. 설정 → 최대 고정 시간 1~10분/무제한, 기본5분. 화면 꺼짐 포함 실제 경과 시간.
