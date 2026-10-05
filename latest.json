@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "versionCode": 11,
+  "versionName": "0.1.11",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-11.apk",
+  "releaseNotes": "걷기 크기 98% 보정. 앱 시작 및 설정에서 업데이트 확인. 터치 반응은 꺼져 있습니다.",
+  "sha256": "342e7fff4a1173a69d52dd1c77b06eaf4705f1fff19600acc283208618168ed8"
+}
