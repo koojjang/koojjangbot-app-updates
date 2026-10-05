@@ -2,9 +2,9 @@
 
 공개 APK와 최신 버전 정보만 보관하는 배포 저장소입니다.
 
-[최신 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-14.apk)
+[최신 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-15.apk)
 
-현재 버전: 0.1.14 (versionCode 14)
+현재 버전: 0.1.15 (versionCode 15)
 
 앱은 실행 시와 설정의 **업데이트 확인** 버튼으로 `latest.json`을 확인합니다. 새 버전이 있으면 다운로드 안내가 표시됩니다. 다운로드 후 Android 설치 화면에서 직접 설치합니다.
 
@@ -15,3 +15,5 @@
 APK를 먼저 업로드하고 다운로드 가능 여부를 확인한 뒤 `latest.json`을 갱신합니다. APK와 메타데이터의 버전은 일치해야 하며 이전 APK는 유지합니다.
 
 0.1.14: 설정 → 크기 조절에서 50~150% 조절, 기본 크기 복귀 및 자동 저장.
+
+0.1.15: 폰 화면에 띄우기. 첫 표시 권한 허용 후 홈/다른 앱으로 이동. 드래그로 이동, 앱/알림에서 끄기. 화면 잠금 중 숨김.

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 14,
-  "versionName": "0.1.14",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-14.apk",
-  "releaseNotes": "설정에 뀨짱 크기 조절 추가: 50~150%, 실시간 반영, 자동 저장, 기본 크기로 복귀. 기존 걷기 크기 보정 유지.",
-  "sha256": "5e04a1a50f761b57d18eb6a5c3f3e9788b3b2c27d523a59438a9ed57fc5155e6"
+  "versionCode": 15,
+  "versionName": "0.1.15",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-15.apk",
+  "releaseNotes": "폰 화면에 띄우기 추가: 다른 앱 위에서 서기/걷기, 드래그 이동, 앱 및 알림에서 끄기. 크기 설정 공유, 화면 잠금 시 숨김.",
+  "sha256": "f53997b534cfa68f9458fd9e82469dd1caf125a48de290e7cdc158ccb2f7b6f3"
 }
