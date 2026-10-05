@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 19,
-  "versionName": "0.1.19",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-19.apk",
-  "releaseNotes": "고정1/고정2 추가: 더블탭으로 앉기/일어나기, 앉은 채 드래그. 스탠딩과 같은 깜빡임. 최대 고정 시간 1~10분/무제한, 기본5분. 화면 꺼짐 포함 실제 경과 시간으로 자동 해제.",
-  "sha256": "c6ebc2b6abeecca9dbc2fd54076d07b270624f2c130f4637e3e93a4500867bc9"
+  "versionCode": 20,
+  "versionName": "0.1.20",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-20.apk",
+  "releaseNotes": "고정1·고정2를 승인한 수정6 그림으로 교체했습니다. 바닥 위치와 스탠딩 기준 크기를 맞췄습니다.",
+  "sha256": "b7c8b642af8ae8b738443dfe754643f42e2220dcd4ee16d3ff48fe4fd2ad0fd9"
 }
