@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 16,
-  "versionName": "0.1.16",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-16.apk",
-  "releaseNotes": "화면 잠금 해제 뒤 캐릭터 복귀 처리 보완. 화면 이동을 디스플레이 프레임에 동기화하고 불필요한 창/그림 갱신 감소. 걷기 그림 전환은 기존 0.5초 유지.",
-  "sha256": "33982f8d1a6f9c747fb984c52c31ce76bc446f0816e88615cda564c14c212d25"
+  "versionCode": 18,
+  "versionName": "0.1.18",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-18.apk",
+  "releaseNotes": "스탠딩 눈 깜빡임 추가: 3~7초 랜덤 대기, 한 번 70%/두 번 30%. 방과 HUD 크기를 HUD 기준으로 통일, 기존 크기 설정 보존. 앱 이름 및 문구를 쿠짱으로 변경.",
+  "sha256": "a33e8728fe61493c8737d8c1dbc2950fabb3d22b59e43e308c59be582dab7ddd"
 }

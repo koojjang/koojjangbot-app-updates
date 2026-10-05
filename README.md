@@ -1,10 +1,10 @@
-# 뀨짱의 방 업데이트
+# 쿠짱의 방 업데이트
 
 공개 APK와 최신 버전 정보만 보관하는 배포 저장소입니다.
 
-[최신 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-16.apk)
+[최신 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-18.apk)
 
-현재 버전: 0.1.16 (versionCode 16)
+현재 버전: 0.1.18 (versionCode 18)
 
 앱은 실행 시와 설정의 **업데이트 확인** 버튼으로 `latest.json`을 확인합니다. 새 버전이 있으면 다운로드 안내가 표시됩니다. 다운로드 후 Android 설치 화면에서 직접 설치합니다.
 
@@ -19,3 +19,5 @@ APK를 먼저 업로드하고 다운로드 가능 여부를 확인한 뒤 `lates
 0.1.15: 폰 화면에 띄우기. 첫 표시 권한 허용 후 홈/다른 앱으로 이동. 드래그로 이동, 앱/알림에서 끄기. 화면 잠금 중 숨김.
 
 0.1.16: 화면 잠금 해제 후 표시 복구 보완, 위치 갱신을 화면 프레임에 동기화하고 불필요한 갱신 감소.
+
+0.1.18: 스탠딩 눈 깜빡임(3~7초 대기, 두 번 30%). 방/HUD 공통 120dp 기본 크기. 저장된 크기 % 유지. 앱 표시 이름 쿠짱.
