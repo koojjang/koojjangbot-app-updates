@@ -10,9 +10,9 @@
 
 ## 현재 배포
 
-현재 공개 버전: **0.1.20 (versionCode 20)**. 이후 최신 버전의 기준은 [latest.json](latest.json)입니다. 최신 CI 실행 번호와 공개 배포 버전은 다를 수 있습니다.
+현재 공개 버전: **0.1.22 (versionCode 22)**. 이후 최신 버전의 기준은 [latest.json](latest.json)입니다. 최신 CI 실행 번호와 공개 배포 버전은 다를 수 있습니다.
 
-[0.1.20 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-20.apk)
+[0.1.22 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-22.apk)
 
 앱은 실행 시와 설정의 **업데이트 확인** 버튼으로 latest.json을 확인합니다. 새 버전이 있으면 다운로드 안내가 표시됩니다. 다운로드 후 Android 설치 화면에서 직접 설치합니다. 같은 버전에서는 수동 확인 시 최신 버전이라고 표시됩니다.
 
@@ -24,6 +24,8 @@
 - 0.1.18: 스탠딩 깜빡임3~7초/두 번30%, 방/HUD 공통120dp 기본 크기, 저장된 크기 유지, 앱 명칭 쿠짱.
 - 0.1.19: 고정1/고정2, 더블탭 고정/해제, 고정 중 드래그, 최대1~10분/무제한 설정(기본5분), 화면 꺼짐 포함 경과 시간.
 - 0.1.20: 사용자 승인한 고정1_수정6/고정2_수정6으로 교체, 공통 배율·바닥 정렬. 빌드/검사 통과, 새 그림의 실기기 확인은 아직 보고되지 않음.
+
+- 0.1.22: 하품1·기지개1 랜덤 행동, 걷기·하품·기지개 각각 ON/OFF. 행동 사이 기본 자세 복귀, 고정 중 걷기 제외. 행동 검사·빌드·lint 및 APK 소재/버전 확인 완료, 실제 폰 확인 대기.
 
 ## 배포 순서
 

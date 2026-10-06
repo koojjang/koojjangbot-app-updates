@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 20,
-  "versionName": "0.1.20",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-20.apk",
-  "releaseNotes": "고정1·고정2를 승인한 수정6 그림으로 교체했습니다. 바닥 위치와 스탠딩 기준 크기를 맞췄습니다.",
-  "sha256": "b7c8b642af8ae8b738443dfe754643f42e2220dcd4ee16d3ff48fe4fd2ad0fd9"
+  "versionCode": 22,
+  "versionName": "0.1.22",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-22.apk",
+  "releaseNotes": "하품1·기지개1을 랜덤 행동으로 추가했습니다. 설정에서 걷기·하품·기지개를 각각 켜고 끌 수 있습니다. 행동 사이에는 스탠딩 또는 고정 자세로 돌아오며, 고정 중에는 걷지 않습니다.",
+  "sha256": "36a4ab6a2d4f740ffed0f9e810861e812dc37ff4ce13a40849c0ccc91bcb2336"
 }
