@@ -28,7 +28,7 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.34 / versionCode 34. 최신 자동 수면 결과는 문서 마지막 절 참조.
+현재 공개 배포: 0.1.35 / versionCode 35. 최신 수면 말풍선 위치 수정 결과는 문서 마지막 절 참조.
 
 최신 햄버거 모션 배포 정보는 마지막 배포 결과 절 참조. 식사 GUI 정보는19절 참조. 이어지는 0.1.28 항목은 직전 배포 기록이다.
 
@@ -370,3 +370,13 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-34.apk . 사용자 실기기 확인 대기: 수면1·zzZ 위치/크기/호흡, 깨우기 첫 터치·연속 탭·드래그, 고정 만료/무제한, 식사 요청/급식, 설정1~20분/OFF, 잠금 복귀/재시작/방-HUD 전환. 1분 대기로 빠른 시험 가능. 수면2 추가는 실제 결과 후 판단.
 
 - 공개 다운로드 최종 확인: latest.json 및 kkyujjang-34.apk HTTP200, manifest34 및 다운로드 APK SHA-256 d3431023931c60945171b79864307f54ae6f622668e24dbe48dad54c97b0f7ff 일치.
+
+
+## 수면 말풍선 위치 수정 배포 결과 · 2026-10-06 / 0.1.35
+- 사용자0.1.34 실기기 피드백: 수면은 좋음. zzZ가 후드 위에 겹쳐 있어 원하는 '후드 바깥에 약간 여백을 두고 떠 있는' 배치와 다름. 위치만 수정하여0.1.35 배포 완료.
+- 방/HUD 공통 PetRenderer.sleepBubbleBounds 수정. 수면 canvas512×384의 후드 오른쪽 x327/y267 및 말풍선 불투명 윤곽 위치를 기준으로 native8px 오른쪽 간격,24px 위로 올려 머리/등 모두 비겹침. 간격/위치만 캐릭터 배율 연동, 말풍선 크기·꼬리 방향·문자 유지.
+- 수면1·말풍선·기존 그림·character.json 모두0.1.34와 바이트 동일. 승인 원본 재생성/재채색 없음. 수면/호흡/급식/고정/설정/잠금/방-HUD 규칙 유지.
+- 합성 preview에서 후드 오른쪽 공중 배치 및 꼬리 방향 확인. alpha>=32의 실제 캐릭터/말풍선 픽셀 겹침0 확인. 실기기 새 위치 확인은 사용자 대기.
+- 기능 커밋823313bdc64a84b95a08a42d6c74eed5787b36f7. CI https://github.com/koojjang/koojjangbot-app/actions/runs/37463660436 run35: 기존 행동 검사/SleepCheck·assembleDebug·lintDebug 모두 성공.
+- ZIP SHA-256 fca9ec9aa33170267532515a56880d3e08c511d76575df36381aaf8482e90200 확인. APK 내부 com.koojjang.app/versionCode35/versionName0.1.35. v2 서명/콘텐츠 digest 검증,34와 인증서 동일. APK SHA-256 a5fb13616e1bfb0c262f201f816e436aa2f6e096689e044c75a2c8882352fba9, 공개 blob b43aefc2b8ce5342bb558464bd7b91f921488461 일치. APK 게시 후 latest.json35 갱신.
+- APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-35.apk . 빌드/합성 검증과 실기기 확인을 구분. 다음 확인: 사용자 폰75% 등 실제 크기에서 후드 옆 여유·말풍선 위치, 기존 수면 사용감. 수면2 보류 유지.
