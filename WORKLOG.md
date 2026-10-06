@@ -150,3 +150,5 @@
 - 산출물 ZIP SHA-25678e9253ef9c95be82492556b51c587f8360ef61cd6028dcf27c41adaa49a369a 일치. APK v2 서명 및 콘텐츠 digest 암호학적으로 검증,33과 인증서 SHA-256 b1b7fe19f0a737c57a9e23ab76f8e4e9fa75e71e4c5bcbc405af05d82db8f21a 동일. 기존 그림/음식 소재 전부33과 바이트 동일, 새 수면/말풍선/character.json 소스와 바이트 동일.
 - APK SHA-256 d3431023931c60945171b79864307f54ae6f622668e24dbe48dad54c97b0f7ff, 공개 Git blob101f3bd342defaa5bea87f63f95dcc478fd9a2fd 일치. APK 먼저 게시 후 latest.json34 갱신.
 - APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-34.apk . 사용자 실기기 확인 대기: 수면1·zzZ 위치/크기/호흡, 깨우기 첫 터치·연속 탭·드래그, 고정 만료/무제한, 식사 요청/급식, 설정1~20분/OFF, 잠금 복귀/재시작/방-HUD 전환. 1분 대기로 빠른 시험 가능. 수면2 추가는 실제 결과 후 판단.
+
+- 공개 다운로드 최종 확인: latest.json 및 kkyujjang-34.apk HTTP200, manifest34 및 다운로드 APK SHA-256 d3431023931c60945171b79864307f54ae6f622668e24dbe48dad54c97b0f7ff 일치.
