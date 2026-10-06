@@ -168,3 +168,5 @@
 - 기능 커밋823313bdc64a84b95a08a42d6c74eed5787b36f7. CI https://github.com/koojjang/koojjangbot-app/actions/runs/37463660436 run35: 기존 행동 검사/SleepCheck·assembleDebug·lintDebug 모두 성공.
 - ZIP SHA-256 fca9ec9aa33170267532515a56880d3e08c511d76575df36381aaf8482e90200 확인. APK 내부 com.koojjang.app/versionCode35/versionName0.1.35. v2 서명/콘텐츠 digest 검증,34와 인증서 동일. APK SHA-256 a5fb13616e1bfb0c262f201f816e436aa2f6e096689e044c75a2c8882352fba9, 공개 blob b43aefc2b8ce5342bb558464bd7b91f921488461 일치. APK 게시 후 latest.json35 갱신.
 - APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-35.apk . 빌드/합성 검증과 실기기 확인을 구분. 다음 확인: 사용자 폰75% 등 실제 크기에서 후드 옆 여유·말풍선 위치, 기존 수면 사용감. 수면2 보류 유지.
+
+- 공개 다운로드 최종 확인: latest.json35 및 APK35 HTTP200, 다운로드 APK SHA-256 a5fb13616e1bfb0c262f201f816e436aa2f6e096689e044c75a2c8882352fba9 일치.
