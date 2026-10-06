@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 34,
-  "versionName": "0.1.34",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-34.apk",
-  "releaseNotes": "오래 터치하지 않으면 쿠짱이 옆으로 누워 잠들어요. 수면1과 작은 zzZ 말풍선, 미세한 숨쉬기를 추가했어요. 설정에서 자동 잠들기 ON/OFF와 대기시간 1~20분을 슬라이더로 조절할 수 있어요. 고정 유지시간도 1~20분 슬라이더와 무제한으로 바꿨어요.",
-  "sha256": "d3431023931c60945171b79864307f54ae6f622668e24dbe48dad54c97b0f7ff"
+  "versionCode": 35,
+  "versionName": "0.1.35",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-35.apk",
+  "releaseNotes": "수면 zzZ 말풍선을 후드 바깥으로 옮겼어요. 머리와 몸에 겹치지 않고 조금 떨어진 공중에 뜨며, 꼬리가 후드 쪽을 향합니다. 그림·색감·크기와 기존 수면 동작은 유지합니다.",
+  "sha256": "a5fb13616e1bfb0c262f201f816e436aa2f6e096689e044c75a2c8882352fba9"
 }
