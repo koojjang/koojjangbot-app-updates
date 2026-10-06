@@ -10,15 +10,17 @@
 
 ## 현재 배포
 
-현재 공개 버전: **0.1.26 (versionCode 26)**. 이후 최신 버전의 기준은 [latest.json](latest.json)입니다. 최신 CI 실행 번호와 공개 배포 버전은 다를 수 있습니다.
+현재 공개 버전: **0.1.28 (versionCode 28)**. 이후 최신 버전의 기준은 [latest.json](latest.json)입니다. 최신 CI 실행 번호와 공개 배포 버전은 다를 수 있습니다.
 
-[0.1.26 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-26.apk)
+[0.1.28 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-28.apk)
 
 앱은 실행 시와 설정의 **업데이트 확인** 버튼으로 latest.json을 확인합니다. 새 버전이 있으면 다운로드 안내가 표시됩니다. 다운로드 후 Android 설치 화면에서 직접 설치합니다. 같은 버전에서는 수동 확인 시 최신 버전이라고 표시됩니다.
 
 ## 변경 이력
 
-- 0.1.26: 키보드 높이에 따라 HUD 활동 영역 조절 시도. 위치·목적지 비율 및 그림 크기 유지, 영역 변화 시 약0.2초 부드러운 위치 이동. Android11+ 대상, 기기 감지 확인 대기.
+- 0.1.28: 사용자 채택 잡힌 모습1. 방/HUD 드래그 중 표시, 놓기·취소·숨김 시 기본 자세 복귀, 고정 기한 유지. 빌드·행동 검사·lint 및 기존 서명 확인. 실기기 드래그 전환 확인 대기.
+
+- 0.1.26: 키보드 높이에 따라 HUD 활동 영역 조절 시도. 위치·목적지 비율 및 그림 크기 유지, 영역 변화 시 약0.2초 부드러운 위치 이동. Android11+ 대상, 사용자 실기기 키보드 회피 정상 확인.
 
 - 0.1.25: 채택된 메뉴 바라보기 자세 및 좌우 반전. 탭 대기/더블탭 간격20% 단축, 메뉴 높이48dp. 메뉴 행동 검사·빌드·lint 통과, 실기기 확인 대기.
 

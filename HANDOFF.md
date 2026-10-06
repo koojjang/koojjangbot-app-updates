@@ -16,12 +16,12 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.26 / versionCode 26.
+현재 공개 배포: 0.1.28 / versionCode 28.
 
-- 소스 기능·소재 커밋: 4b004c7236651de95cf103a4228ee3daa2b0f90a.
-- CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37408364750 (run_number 26, 성공).
-- APK: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-26.apk
-- APK SHA-256: f8ad84a278c760e0c788d3e3448b23c5dfe23dab34367f710c2957047ee0e4d6.
+- 소스 기능·소재 커밋: 1c4438df62bfdd127f0af79265194f9f80d57dbf.
+- CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37409884558 (run_number 28, 성공).
+- APK: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-28.apk
+- APK SHA-256: 9e906e2067b587b30ae2ccb0a1e9b3d1cef250d88804e31b11b66674d615eb01.
 - 업데이트 정보: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/latest.json
 - 행동 검사, APK 빌드, Android lint 통과. 산출물 ZIP digest 확인, APK 안의 모든 캐릭터 WebP와 로컬 채택 소재가 바이트 단위로 같은지 확인했다.
 - 0.1.20의 새 앉기 그림은 사용자 승인 후 배포했다. 사용자가 0.1.20 앉기 전환이 실제 폰에서도 자연스럽다고 확인했다. 빌드 성공을 실기기 성공으로 표현하지 않는다.
@@ -70,6 +70,8 @@
 | 고정2_수정6 | fixed-2.webp | 현재 채택된 앉기, 눈 감음 |
 | 하품1 | yawn-1.webp | 채택된 한 장, 2초 표시 |
 | 기지개1 | stretch-1.webp | 채택된 한 장, 2.5초 표시 |
+| 메뉴1 | menu-1.webp | HUD 메뉴 방향을 바라봄, 왼쪽 메뉴는 좌우 반전 |
+| 잡힌 모습1 | held-1.webp | 드래그 중 한 프레임 |
 
 소스 저장소의 소재 경로: app/src/main/assets/characters/kkyujjang/.
 - character.json: 그림 파일·크기·앵커·걷기 간격/배율.
@@ -244,4 +246,17 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - API26~29는 기존 영역 유지. 바닥에 붙은 키보드 대상으로 floating keyboard는 bottom inset이 없으면 회피하지 않음.
 - HudAreaCheck: 영역 계산·비율 위치 복귀·부드러운 이동·하단 경계 검증. CI 37408364750: 행동 검사·assembleDebug/lintDebug 성공.
 - APK 0.1.26/versionCode26/com.koojjang.app, 기존 서명 및 모든 캐릭터/아이콘 소재 동일. ZIP sha256:6d757a6dedb7e2a362e097f3d8e8eb40973f11a8d097f55fa0a88076a3175a0f, APK blob 4fd4e528974670109f04080eed808bc9cedbf28f 검증.
-- 기기별 IME 전달 및 실제 키보드 열림/닫힘 회피는 사용자 테스트 대기. 변경 시 Logcat KoojjangHud에 keyboard/imeBottom/availableHeight 기록. 입력 텍스트는 읽지 않음.
+- 사용자는 0.1.26 실제 키보드 회피가 작동해 이제 앉혀 고정해 둘 필요가 없어졌다고 확인했다. 변경 시 Logcat KoojjangHud에 keyboard/imeBottom/availableHeight 기록. 입력 텍스트는 읽지 않음.
+
+
+## 16. 잡힌 모습1 · 2026-10-06 / 0.1.28
+
+- 사용자 생성 시안 그대로 채택. 스탠딩1 원본 참고, 후드 뒷덜미가 들리고 팔·다리를 축 늘어뜨린 느낌, 아주 약간 삐진 무표정. 사용자 승인 후 추가 미술 수정 없음.
+- 원본 art/kkyujjang/held/held-1-source.png (1024×1536 RGBA) 보존, blob ca060ffc8c97fc41d18d377dfa722fdf27e83152. 원본 업로드의 출력 길이 제한 문제를 바로 수정해 완전한 원본 해시 확인.
+- 앱 held-1.webp 384×512, scale=485/1451/x10/y5, alpha·색 유지, lossless WebP. 발끝503px, 앵커 .5/.985, 공통 배율 displayWidth/320. blob 8bbbfcd63f8942d03d07c249a2c429fbcdad7815.
+- 방/HUD 공통, 움직임이 touch slop을 넘을 때만 잡힌 모습 표시. 짧은 탭/더블탭은 기존 처리. 드래그 중 자동 행동·깜빡임 중단, 놓기/취소/화면 숨김/방 pause 시 기존 고정 여부에 따라 앉기 또는 서기 복귀.
+- PetEngine.heldMode는 fixedMode와 독립. beginHeld/endHeld, renderer.frameIndex -8. 고정 시각/기한 초기화 금지, 드래그 중 기한이 만료되면 놓았을 때 서기. 드래그 시작 시 메뉴 닫음, 기존 방향 유지.
+- HeldCheck: 이동·행동 중단, 좌표 이동 중 자세 유지, 서기/앉기 복귀, 메뉴 종료, 원래 고정 기한 만료, 무제한·반복 정리 검증. CI 37409884558 행동 검사·assembleDebug/lintDebug 성공.
+- APK 0.1.28/versionCode28/com.koojjang.app, 기존 0.1.26 서명 인증서 일치, 기존 캐릭터 및 아이콘 바이트 동일. 새 그림·설정 JSON 포함 및 해시 확인. ZIP digest sha256:290e3f0a11139fb08b22a101a16b159db69c6b8de2bf0f933b2c43732f669acc, APK blob b355fd3d024483089431fa80e2bc887cb2f2b9dd.
+- run27은 원본 보존 수정 전 실행이라 배포하지 않음. 최종 main의 run28 산출물만 공개. APK 먼저 게시하고 최신 정보 갱신.
+- 사용자는 0.1.25 메뉴 표시 및 0.1.26 키보드 회피를 실제 정상으로 확인했다. 잡힌 모습의 실기기 전환·놓기·취소·잠금 복귀는 이번 배포 후 확인 대기.

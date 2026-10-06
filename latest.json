@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 26,
-  "versionName": "0.1.26",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-26.apk",
-  "releaseNotes": "키보드가 열리면 쿠짱의 활동 영역을 줄여 키보드 위에서 움직이도록 했습니다. 키보드를 닫으면 같은 비율의 위치로 부드럽게 돌아옵니다.",
-  "sha256": "f8ad84a278c760e0c788d3e3448b23c5dfe23dab34367f710c2957047ee0e4d6"
+  "versionCode": 28,
+  "versionName": "0.1.28",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-28.apk",
+  "releaseNotes": "쿠짱을 드래그하면 잡힌 모습으로 바뀝니다. 놓으면 기존 서기·앉기로 돌아오며, 고정 제한시간은 그대로 유지됩니다.",
+  "sha256": "9e906e2067b587b30ae2ccb0a1e9b3d1cef250d88804e31b11b66674d615eb01"
 }
