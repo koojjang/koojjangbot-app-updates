@@ -16,7 +16,9 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.28 / versionCode 28.
+현재 공개 배포: 0.1.29 / versionCode 29.
+
+최신 식사·성장 패치의 검증 및 배포 정보는 아래 17절 참조. 이어지는 0.1.28 항목은 직전 배포 기록이다.
 
 - 소스 기능·소재 커밋: 1c4438df62bfdd127f0af79265194f9f80d57dbf.
 - CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37409884558 (run_number 28, 성공).
@@ -260,3 +262,16 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - APK 0.1.28/versionCode28/com.koojjang.app, 기존 0.1.26 서명 인증서 일치, 기존 캐릭터 및 아이콘 바이트 동일. 새 그림·설정 JSON 포함 및 해시 확인. ZIP digest sha256:290e3f0a11139fb08b22a101a16b159db69c6b8de2bf0f933b2c43732f669acc, APK blob b355fd3d024483089431fa80e2bc887cb2f2b9dd.
 - run27은 원본 보존 수정 전 실행이라 배포하지 않음. 최종 main의 run28 산출물만 공개. APK 먼저 게시하고 최신 정보 갱신.
 - 사용자는 0.1.25 메뉴 표시 및 0.1.26 키보드 회피를 실제 정상으로 확인했다. 잡힌 모습의 실기기 전환·놓기·취소·잠금 복귀는 이번 배포 후 확인 대기.
+
+
+## 17. 식사·성장 시스템 · 2026-10-06 / 0.1.29
+
+- 소스 기능 커밋: 03e391ebbec35bd34ad170d6021db139812f5944. CI https://github.com/koojjang/koojjangbot-app/actions/runs/37416816702 성공. 행동 검사(새 MealCheck 포함), assembleDebug, lintDebug 통과.
+- 정상 식사는 8시간 간격. 지나간 요청은 계속 남고 누적 보상은 없음. 첫 성장 데이터 생성 시점부터 첫 대기 시작. 쿠짱의 방 하단 식사 테스트 모드로 1분 간격 시험 가능하며, 저장되고 HUD에도 같은 간격 적용. 정상 모드 복귀 시 마지막 급식 기준 8시간으로 돌아감.
+- 방/HUD에 밥·햄버거 세트·우유 젖병 아이콘 3개를 표시. 현재 어떤 아이콘을 눌러도 식사젖병1·2만 0.5초마다 교차하며 실제 보이는 시간 기준 총 30초. 식사 중 자동 이동·랜덤 행동 중단.
+- 드래그가 시작되면 잡힘으로 전환하고 식사 남은시간과 프레임 위상을 일시정지. 놓기/취소 시 남은시간부터 재개. 보이는 방/HUD가 모두 사라지면 멈추고 화면 복귀 시 재개. 한쪽이 잡힌 동안 공통 식사 시계도 멈춤. 기존 고정 시간은 독립적으로 만료.
+- GrowthState/GrowthStore에서 경험치·급식 시각·남은시간·프레임 위상·테스트 모드 공유/저장. 방과 HUD 동시 실행으로 경험치를 중복 지급하지 않음. 급식 1회 경험치 +1, 경험치 2마다 레벨 +1. 방 상단과 HUD 메뉴에 성장 정보 표시.
+- 식사젖병 원본/음식 원본은 art/kkyujjang/meals에 보존, 변환 규칙은 해당 README.md. 앱 milk-meal-1/2.webp는 384×512, 공통 anchor .5/.985. 사용자 승인 소재에 추가 미술 수정 없음.
+- APK: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-29.apk . 내부 package com.koojjang.app, versionCode29/versionName0.1.29 확인. 기존 0.1.28과 서명 인증서 SHA-256 동일.
+- 산출물 ZIP SHA-256 55431b02316b39e3ccc0f7fa118dd2ada521ccd82382d13b4a434463d50b2fab 검증. APK SHA-256 e7d24693861c1afd6b855ebb7c7f68c3edcb2c18658e86e4b6cede6e87c2a129, 공개 APK blob defb8888c487d5abffa43e529778da222d4acd1a. APK 안 캐릭터/음식/설정 16개 파일이 기능 커밋의 Git blob과 전부 일치.
+- APK 게시 후 latest.json 0.1.29로 갱신. 실기기 식사 풍선·아이콘 크기·식사/잡힘 전환과 재개는 사용자 확인 대기. 빌드 성공을 실기기 검증으로 표현하지 않음.
