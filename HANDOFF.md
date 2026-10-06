@@ -16,9 +16,9 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.29 / versionCode 29.
+현재 공개 배포: 0.1.30 / versionCode 30.
 
-최신 식사·성장 패치의 검증 및 배포 정보는 아래 17절 참조. 이어지는 0.1.28 항목은 직전 배포 기록이다.
+최신 식사 GUI 패치의 검증 및 배포 정보는 아래 18절 참조. 이어지는 0.1.28 항목은 직전 배포 기록이다.
 
 - 소스 기능·소재 커밋: 1c4438df62bfdd127f0af79265194f9f80d57dbf.
 - CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37409884558 (run_number 28, 성공).
@@ -275,3 +275,16 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - APK: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-29.apk . 내부 package com.koojjang.app, versionCode29/versionName0.1.29 확인. 기존 0.1.28과 서명 인증서 SHA-256 동일.
 - 산출물 ZIP SHA-256 55431b02316b39e3ccc0f7fa118dd2ada521ccd82382d13b4a434463d50b2fab 검증. APK SHA-256 e7d24693861c1afd6b855ebb7c7f68c3edcb2c18658e86e4b6cede6e87c2a129, 공개 APK blob defb8888c487d5abffa43e529778da222d4acd1a. APK 안 캐릭터/음식/설정 16개 파일이 기능 커밋의 Git blob과 전부 일치.
 - APK 게시 후 latest.json 0.1.29로 갱신. 실기기 식사 풍선·아이콘 크기·식사/잡힘 전환과 재개는 사용자 확인 대기. 빌드 성공을 실기기 검증으로 표현하지 않음.
+
+
+## 18. 랜덤 음식 한 개·크레파스 말풍선 · 2026-10-06 / 0.1.30
+
+- 사용자 정정: 음식3개 선택 메뉴가 아니라 밥/햄버거/젖병 중 하나만 랜덤 표시. 흰 내부와 파자마 핑크 크레파스 테두리의 생성 시안 세 번째를 채택. 음식 아이콘은 기존보다 20% 축소(80%).
+- 말풍선 원본 art/kkyujjang/meals/food-bubble-approved-3-source.png, 앱 food-bubble.png. blob 239c0b6f3d34e1d6e2c471179f01508f5cc96c92 동일. 기존 생성1·2는 가운데까지 투명해 미채택. 세 번째 원본은 재생성·재채색·변형 없이 사용.
+- FoodArt는 한 장의 말풍선과 선택된 음식 하나만 합성. 64dp 정사각형 영역. 좌측 배치 시 말풍선만 반전하여 꼬리가 캐릭터 방향으로 향하고 음식 자체는 반전하지 않음. 말풍선 전체가 하나의 급식 버튼.
+- GrowthState.requestFood가 요청당 균등랜덤(nextInt(3)) 한 번만 선택. requestedFood를 GrowthStore/MainActivity preferences에 저장하여 방/HUD, 화면 갱신, 앱 재시작에서 동일 음식 유지. 급식 성공 시 초기화하고 다음 요청에 다시 뽑음. 대기 미도달 시 표시 안 함.
+- 기존 8시간/테스트1분 간격·경험치·0.5초 프레임 교차·30초 식사·잡힘 일시정지 후 재개는 유지. 방 음식 탭에서도 멀티터치는 급식 취소.
+- 소스 기능 커밋 b4d4cb784d749d3c735d84683a36a603fac76162. CI https://github.com/koojjang/koojjangbot-app/actions/runs/37419376264 성공(행동 검사·assembleDebug·lintDebug). 로컬 MealCheck에서도 랜덤 후보3개, 요청 유지/재시작/다음 급식, 기존 식사 타이밍/재개 검사 통과.
+- APK 0.1.30/versionCode30, com.koojjang.app. 기존 배포와 서명 인증서 동일. APK의 캐릭터/음식/설정17개 파일 모두 기능 커밋과 Git blob 동일.
+- ZIP SHA-256 ec24c89331c0db20ea4520444eea41222039c46b9dedda1965f8082fd655b965 확인. APK SHA-256 f1958ac8cce307324cad8c011581dbbabad51cf798c689580e9c7993909f3da6, 공개 blob 3e9c933166ac27251a34401032f2fdf0cc1d44c8. APK 먼저 게시 후 latest.json 갱신.
+- APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-30.apk . 실제 폰에서 말풍선 크기·배치·아이콘 크기와 탭 사용감은 사용자 피드백 대기.
