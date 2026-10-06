@@ -16,9 +16,9 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.30 / versionCode 30.
+현재 공개 배포: 0.1.31 / versionCode 31.
 
-최신 식사 GUI 패치의 검증 및 배포 정보는 아래 18절 참조. 이어지는 0.1.28 항목은 직전 배포 기록이다.
+최신 식사 GUI 패치의 검증 및 배포 정보는 아래 19절 참조. 이어지는 0.1.28 항목은 직전 배포 기록이다.
 
 - 소스 기능·소재 커밋: 1c4438df62bfdd127f0af79265194f9f80d57dbf.
 - CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37409884558 (run_number 28, 성공).
@@ -288,3 +288,15 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - APK 0.1.30/versionCode30, com.koojjang.app. 기존 배포와 서명 인증서 동일. APK의 캐릭터/음식/설정17개 파일 모두 기능 커밋과 Git blob 동일.
 - ZIP SHA-256 ec24c89331c0db20ea4520444eea41222039c46b9dedda1965f8082fd655b965 확인. APK SHA-256 f1958ac8cce307324cad8c011581dbbabad51cf798c689580e9c7993909f3da6, 공개 blob 3e9c933166ac27251a34401032f2fdf0cc1d44c8. APK 먼저 게시 후 latest.json 갱신.
 - APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-30.apk . 실제 폰에서 말풍선 크기·배치·아이콘 크기와 탭 사용감은 사용자 피드백 대기.
+
+
+## 19. 머리 옆 말풍선·캐릭터 크기 연동 배치 · 2026-10-06 / 0.1.31
+
+- 사용자 75% 사용 사진에서 말풍선이 캐릭터와 멀고 몸통 옆에 표시됨. 아이콘/말풍선 미술과 크기는 채택 유지. 말풍선을 더 가까이 머리 옆으로 올리고 캐릭터 크기50~150% 변경에도 위치/간격을 연동하도록 요청.
+- PetRenderer가 프레임 로드 시 alpha>=32인 가시 영역을 한 번 계산/캐시. draw와 visibleBounds가 같은 Pose(프레임·앵커·배율·방향)를 공유하여 투명 패딩과 실제 표시 위치를 혼동하지 않음. 걷기98% 보정과 좌우반전도 반영.
+- 방/HUD 공통 FoodBubblePlacement: 가시 윤곽 옆2dp 간격, 가시 높이27% 지점에 말풍선 중앙을 맞춰 머리 옆 배치. 말풍선64dp 및 아이콘 크기는 캐릭터 설정과 독립적으로 유지. 크기를 바꾸면 실제 표시 bounds 기준 위치만 함께 변경. 매 표시 프레임 갱신.
+- 오른쪽 공간 부족 시 왼쪽으로 전환(말풍선 꼬리 반전). 양쪽 불가 시 위/아래 비겹침 공간 사용. 가능한 공간이 전혀 없으면 덮어 표시하지 않음. 화면/키보드 활동 영역 밖으로 나가지 않으며 방 상단 성장패널88dp 제외.
+- 그림/아이콘·랜덤 음식·식사 타이밍은 변경하지 않음. 드래그 때 기존 숨김 유지.
+- 기능 커밋 865f5d93dd8955e51f8605a9d1c6c822829ab792. CI https://github.com/koojjang/koojjangbot-app/actions/runs/37420300697 행동검사·assembleDebug·lintDebug 성공. 로컬 FoodBubbleCheck도 통과(50~150% 1%단위 머리 추적/윤곽 간격/비겹침, 좌우 가장자리, 상단, 방 패널, 좁은 공간 fallback).
+- APK0.1.31/versionCode31/com.koojjang.app, 기존 서명 인증서 동일. 캐릭터/음식/설정17개 소재가 저장소와 바이트 동일. ZIP SHA-256 54a38ac96888dee95d41c29d8cdf425359fbd13efa07def286ed25d3780dae1e. APK SHA-256 e1503ea3ede444769ee746e72e3ba7cab80d75f8d344574da2d638545fcc9f3f, 공개 blob a4014dfacd351bc84654f8ffe72d06c29994eb33.
+- APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-31.apk 를 먼저 게시 후 latest.json 갱신. 실제 폰75% 기준 배치/크기변경/키보드와 가장자리 사용감은 사용자 피드백 대기.
