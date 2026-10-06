@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 24,
-  "versionName": "0.1.24",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-24.apk",
-  "releaseNotes": "쿠짱을 한 번 누르면 옆에 작은 메뉴가 뜹니다. 앱 열기 버튼으로 쿠짱 키우기로 들어갈 수 있어요. 더블탭 앉기와 드래그는 그대로 사용할 수 있습니다.",
-  "sha256": "76eb6106cf56375fcba58f102d07db6a7f47308b692461073ffb933a87338fe3"
+  "versionCode": 25,
+  "versionName": "0.1.25",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-25.apk",
+  "releaseNotes": "메뉴를 열면 쿠짱이 메뉴 쪽을 바라봅니다. 탭 대기시간을 20% 줄이고 메뉴 높이를 48dp로 조절했습니다.",
+  "sha256": "3bc058ba4e5edb36e153fa7e449046660cf5563c0f5fe4de90e563647765c3d1"
 }

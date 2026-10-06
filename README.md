@@ -10,13 +10,15 @@
 
 ## 현재 배포
 
-현재 공개 버전: **0.1.24 (versionCode 24)**. 이후 최신 버전의 기준은 [latest.json](latest.json)입니다. 최신 CI 실행 번호와 공개 배포 버전은 다를 수 있습니다.
+현재 공개 버전: **0.1.25 (versionCode 25)**. 이후 최신 버전의 기준은 [latest.json](latest.json)입니다. 최신 CI 실행 번호와 공개 배포 버전은 다를 수 있습니다.
 
-[0.1.24 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-24.apk)
+[0.1.25 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-25.apk)
 
 앱은 실행 시와 설정의 **업데이트 확인** 버튼으로 latest.json을 확인합니다. 새 버전이 있으면 다운로드 안내가 표시됩니다. 다운로드 후 Android 설치 화면에서 직접 설치합니다. 같은 버전에서는 수동 확인 시 최신 버전이라고 표시됩니다.
 
 ## 변경 이력
+
+- 0.1.25: 채택된 메뉴 바라보기 자세 및 좌우 반전. 탭 대기/더블탭 간격20% 단축, 메뉴 높이48dp. 메뉴 행동 검사·빌드·lint 통과, 실기기 확인 대기.
 
 - 0.1.24: HUD 원터치 시 작은 앱 열기 메뉴. 메뉴 중 이동 일시 정지, 더블탭 앉기·드래그 유지. 빌드·검사 통과, 실기기 확인 대기.
 
