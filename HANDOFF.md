@@ -28,9 +28,9 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.31 / versionCode 31.
+현재 공개 배포: 0.1.32 / versionCode 32.
 
-최신 식사 GUI 패치의 검증 및 배포 정보는 아래 19절 참조. 이어지는 0.1.28 항목은 직전 배포 기록이다.
+최신 햄버거 모션 배포 정보는 마지막 배포 결과 절 참조. 식사 GUI 정보는19절 참조. 이어지는 0.1.28 항목은 직전 배포 기록이다.
 
 - 소스 기능·소재 커밋: 1c4438df62bfdd127f0af79265194f9f80d57dbf.
 - CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37409884558 (run_number 28, 성공).
@@ -324,3 +324,17 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - 스탠딩1 원본을 실제 열어 확인한 뒤 식사버거1 시안 한 장 생성. 서서 약45도 사선, 양손으로 반쯤 포장된 온전한 햄버거를 들고 기대하는 모습. 현재 사용자 채택 대기.
 - 식사버거2는 한입 베어문 뒤 기쁘게 씹는 모습으로 다음 개별 제작 예정. 밥 프레임 세부 자세는 추후 확정. 한 장에 한 프레임, 채택 후만 반영.
 - 정상8시간/테스트1분·식사30초·프레임0.5초·잡힘 중 시간/프레임 일시정지 및 재개 유지. 앱 소재/코드 미변경, 배포0.1.31 유지. 다음 이어갈 지점은 버거1 사용자 피드백.
+
+### 햄버거 식사 배포 결과 · 2026-10-06 / 0.1.32
+
+- 상태: 햄버거 모션 구현·검증·배포 완료. 밥 전용 모션은 미제작으로 후속 작업.
+- 사용자 식사버거1/2 모두 채택. 승인 PNG 원본 art/kkyujjang/meals/burger-meal-1-source.png 및 burger-meal-2-source.png 보존. 최종 원본 blob f9884583d7e8b6b22ddb3817bfd90dfc2cdb9028 / be8e8801a867ff8761dc33f06d6da862fba57e9c. 원본 업로드 출력 제한으로 잘린 첫 업로드를 수정해 완전한 해시 확인.
+- 앱 burger-meal-1/2.webp 384×512. 공통scale289/905, 리사이즈327×491, x29/y16, 발끝503, anchor .5/.985. 재채색 없음, alpha 유지, lossless WebP. 2의 맛있다는 이모티콘 말풍선 포함.
+- 음식1(햄버거 세트)은 버거1/2, 밥0·젖병2는 기존 젖병1/2. GrowthState.feed에서 요청음식을 mealFood로 보존하고 GrowthStore의 기존 MainActivity preferences에 저장·복원. 기존 진행 중 식사는 기본 젖병으로 호환. 방/HUD 공통 상태를 PetEngine/렌더러에 전달, 음식별 그림 토큰 구분.
+- 정상8시간/테스트1분·30초·500ms·잡힘/숨김 일시정지 및 재개·경험치·랜덤 요청·기존 말풍선 유지.
+- 기능 커밋 c3263cee208226b6c0ed2e2d1568c2f3bed4bbc7. 원본 보존 보완 커밋28b15a20c220afec9538f2a4868adb65c8f349e9(문서/원본만, 앱 코드·소재 동일).
+- CI https://github.com/koojjang/koojjangbot-app/actions/runs/37423491849 (run32) 행동 검사·assembleDebug·lintDebug 성공. MealCheck에 음식별 급식·보존/복원·방/HUD·잡힘 위상 재개·이전 저장값 호환 검증 추가. 로컬 Java 미설치로 로컬 검사 실행 불가, CI에서 전체 검사 통과.
+- ZIP SHA-256 2cc7e4c61ce04f92e28ffb2bea8ed685c47dcdb0cadc5d821314fbe6b18eb050 검증. 실제 APK package com.koojjang.app/versionCode32/versionName0.1.32. 기존31과 서명 인증서 동일, 이전 그림/아이콘 전부 바이트 동일 및 새 버거/JSON 소스와 동일 확인.
+- APK SHA-256 fd0d347ed3897d900a76ac023c3c0d31915c964d1528a71a2db33a3cbb539366, 공개 blob d2f4d2f9196f13909d4eb693f333575112f9fc35 검증. APK 먼저 게시 후 latest.json 갱신.
+- APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-32.apk . 실기기 햄버거 표시/크기/전환·잡힘 재개는 사용자 확인 대기.
+- 다음 이어갈 지점: 밥1/2 자세를 사용자와 확정해 스탠딩1 기준 한 장씩 생성/채택 후 추가. 햄버거는 추가 채택 질문 없이 완료.
