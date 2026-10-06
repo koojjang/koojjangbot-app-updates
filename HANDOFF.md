@@ -16,12 +16,12 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.23 / versionCode 23.
+현재 공개 배포: 0.1.24 / versionCode 24.
 
-- 소스 기능·소재 커밋: 0cd41a905537e9537d6918bab6c022b48d3fff1e.
-- CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37398265711 (run_number 23, 성공).
-- APK: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-23.apk
-- APK SHA-256: 8838f7d96c0c9776861dd577edeb877db9aa6c2fbee471031d8ea0404f8b91be.
+- 소스 기능·소재 커밋: 610af60c55e77b5cb9d9c55ce24533ca9b76e5b8.
+- CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37399821968 (run_number 24, 성공).
+- APK: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-24.apk
+- APK SHA-256: 76eb6106cf56375fcba58f102d07db6a7f47308b692461073ffb933a87338fe3.
 - 업데이트 정보: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/latest.json
 - 행동 검사, APK 빌드, Android lint 통과. 산출물 ZIP digest 확인, APK 안의 모든 캐릭터 WebP와 로컬 채택 소재가 바이트 단위로 같은지 확인했다.
 - 0.1.20의 새 앉기 그림은 사용자 승인 후 배포했다. 사용자가 0.1.20 앉기 전환이 실제 폰에서도 자연스럽다고 확인했다. 빌드 성공을 실기기 성공으로 표현하지 않는다.
@@ -205,3 +205,17 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - CI run 37398265711: 행동 검사, assembleDebug/lintDebug 성공. APK versionCode=23/versionName=0.1.23, 이름 리소스 및 아이콘 원본 포함 확인.
 - artifact ZIP digest dd629539e00dc862eca341b08cfa7e6fcddabb6d86b1f89cb702c36419a24fe2 확인. 공개 APK blob 26f4706850f9eb9c7f3d205b8c48a8d913fbc396, 검증한 APK와 동일. APK 먼저 게시 후 latest.json 갱신.
 - 0.1.23 이름·아이콘의 실기기 표시 및 실제 덮어설치 확인은 사용자 피드백 대기.
+
+
+## 13. HUD 원터치 메뉴 · 2026-10-06 / 0.1.24
+
+- 요청: 전용 일러스트는 추후 제작하고 원터치 메뉴 기능 먼저 구현. 앱 열기 하나만 제공.
+- HUD의 onSingleTapConfirmed로 단일 터치 확정 후 작은 메뉴 표시. 더블탭 고정/해제 및 드래그 유지.
+- 별도 작은 overlay 창 160×64dp, 아이보리·연핑크 테두리·둥근 모서리. 오른쪽 공간 부족 시 왼쪽, 화면 밖으로 나가지 않도록 제한.
+- 메뉴 열린 동안 기존 기본 자세로 돌아와 메뉴 방향으로 좌우 반전하고 이동·랜덤 행동 일시 중단. 고정 만료 시각은 유지.
+- 앱 열기 버튼은 기존 MainActivity를 앞으로 열고 메뉴 닫기. 메뉴 밖 터치·캐릭터 재터치·드래그·화면 잠금·크기/회전 변경·서비스 종료 시 닫기.
+- 전체 화면 터치 창 없이 FLAG_NOT_TOUCH_MODAL/FLAG_WATCH_OUTSIDE_TOUCH 사용. 메뉴 밖 터치는 다른 앱에 전달. 앱 내부 방에는 앱 열기 메뉴 없음.
+- OverlayService의 actionMenu 및 dismissActionMenu/toggleActionMenu에서 메뉴 관리. PetEngine.prepareMenu에서 기본 자세 및 방향 설정. 향후 메뉴 항목 추가 가능.
+- CI 37399821968 행동 검사·APK 빌드·lint 성공. APK versionCode24/versionName0.1.24, com.koojjang.app, 기존 서명 일치 확인.
+- ZIP digest sha256:52c1301c7b0e340965a2a45a046e40031f160a5e25aef19353b22f0920f6f9b0, 공개 APK blob 56f6e9e9f7e12ada5be7adf11e739b43e7262a32, 검증한 산출물과 일치. 기존 캐릭터·아이콘 소재 바이트 단위 동일.
+- 실제 휴대폰 메뉴 표시·앱 열기·더블탭과 드래그 구분·바깥 터치 전달은 사용자 피드백 대기.

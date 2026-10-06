@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 23,
-  "versionName": "0.1.23",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-23.apk",
-  "releaseNotes": "앱 이름을 쿠짱 키우기로 변경하고, 제공한 일러스트를 앱 아이콘으로 적용했습니다.",
-  "sha256": "8838f7d96c0c9776861dd577edeb877db9aa6c2fbee471031d8ea0404f8b91be"
+  "versionCode": 24,
+  "versionName": "0.1.24",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-24.apk",
+  "releaseNotes": "쿠짱을 한 번 누르면 옆에 작은 메뉴가 뜹니다. 앱 열기 버튼으로 쿠짱 키우기로 들어갈 수 있어요. 더블탭 앉기와 드래그는 그대로 사용할 수 있습니다.",
+  "sha256": "76eb6106cf56375fcba58f102d07db6a7f47308b692461073ffb933a87338fe3"
 }
