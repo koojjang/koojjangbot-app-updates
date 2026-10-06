@@ -28,7 +28,7 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.33 / versionCode 33.
+현재 공개 배포: 0.1.34 / versionCode 34. 최신 자동 수면 결과는 문서 마지막 절 참조.
 
 최신 햄버거 모션 배포 정보는 마지막 배포 결과 절 참조. 식사 GUI 정보는19절 참조. 이어지는 0.1.28 항목은 직전 배포 기록이다.
 
@@ -350,3 +350,21 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - APK SHA-256 733c334965293b26693fb959e598df9e8d66581b05180c885a65367f5bc3560b, 공개blob0a01a207ad830115a056977ab89ebd1a0750fba0 일치. APK 게시 후latest.json 갱신.
 - APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-33.apk . 실기기 밥 크기/전환·HUD 켜기/끄기·재진입·알림 종료 확인 대기. 사용자 햄버거0.1.32 결과 만족 확인.
 - 다음 작업: 사용자 실기기 피드백. 승인 없이 새 미술/기능 추가 없음.
+
+
+## 자동 수면·시간 슬라이더 배포 결과 · 2026-10-06 / 0.1.34
+
+- 상태: 사용자 수면1·zzZ 말풍선 채택 후 구현·검증·배포 완료. 실제 APK com.koojjang.app/versionCode34/versionName0.1.34. 기능 커밋 a6364e6e03ddfd7a35b3aa888838c90aa6bc298f.
+- 마지막 캐릭터 터치·드래그·성공 급식 이후 기본10분 수면. 자동 이동/깜빡임/하품/기지개는 초기화하지 않음. 기존 성장 수치/급식 규칙을 바꾸지 않고 수면 자체의 육성 수치 없음.
+- 수면은 fixedMode/heldMode와 독립. 스탠딩/앉기에서 현재 자리의 바닥 기준 옆잠, 자동 이동/랜덤 행동/기존 깜빡임 중지. 터치 DOWN에서 깨우며 깨우기 제스처 및 직후 더블탭 간격은 메뉴/더블탭에서 소비. 드래그 slop 도달 시 기존 잡힘. 깨우기/놓기 때 고정 기한 검사, 원래 기한 유지·무제한 유지·만료 시 서기. 수면 때문에 고정 시각 연장/초기화 없음.
+- 식사/잡힘은 수면보다 우선. 음식 요청은 수면 중 계속 표시, 누르면 해당 음식으로 급식하며 시각 초기화/깨우기. 음식 요청이 있으면 zzZ 장식만 숨겨 충돌 방지. 기존30초/500ms/잡힘·숨김 일시정지/재개 및 HUD 활성 시 방 숨김 유지.
+- 설정 sleepEnabled 기본true/sleepMinutes 기본10,1~20분 SeekBar·즉시 저장. fixedMinutes도1~20분 SeekBar와 별도 무제한 스위치(0), 기존5분 등 저장값 호환. 같은 MainActivity preferences 사용.
+- 시간 정책: GrowthStore 공통 SleepState와 lastPetInteraction 저장. 실행 중에는 elapsedRealtime으로 잠금 포함 경과를 계산, 재시작은 저장한 벽시계 시각에서 경과 복원. 최초/기존 데이터에 시각 없으면 첫 초기화부터 대기, 시계 역행 음수 경과0 보정. 잠금 해제·재시작·방/HUD 전환 자체는 상호작용으로 처리하지 않음. 숨김 중 그림은 멈추고 복귀 시 수면 여부 계산, 진행 식사 우선. 기존 방/HUD의 위치·고정 상태 독립 및 재시작 시 기존 복원 범위 유지, 수면 때문에 추가로 고정 상태를 영구 저장하지 않음.
+- 승인 PNG art/kkyujjang/sleep/sleep-1-source.png (1536×1024) 및 sleep-bubble-source.png (1536×1024) 바이트 그대로 보존. 원본 Git blob15c9eef785703bf2e8632ebd31b5a364607ea499 /51b941a8e566328733b1a14a64238b59be655c47 확인. 수면2 보류.
+- 수면1 변환: 후드 머리 폭 기준289/990,448×299로 리사이즈,512×384 canvas x32/y92, 가시 바닥378px, anchor .5/.984375, lossless WebP·색/alpha 유지. 서기 높이로 확대 안 함. 원본 방향 유지. 4초 주기0~0.4% 세로 호흡만 바닥 기준, 가로 출렁임 없음.
+- 별도 zzZ는 완전 투명 여백만 crop하여1105×745 lossless WebP. 가시 말풍선 폭은 약 캐릭터 표시폭23%(투명 패딩 포함34%)로 후드 귀 정도. 얼굴 쪽 꼬리로 머리 위에 겹쳐 표시. HUD에는 FLAG_NOT_TOUCHABLE 별도 장식 창, 음식/메뉴/잡힘/잠금 시 숨김. 수면 HUD 창만 넓혀 눕기 잘림 방지, 기본 중심/바닥 기준 유지하고 가장자리에서만 안전 범위 보정.
+- CI https://github.com/koojjang/koojjangbot-app/actions/runs/37461812083 run34: 행동 검사(기존9개+SleepCheck), assembleDebug,lintDebug 모두 성공. SleepCheck에서10분 경계/ON-OFF/1·20분/상호작용 초기화/잠금·재시작 경과/시계 역행/수면 중 이동 중단/고정 만료·무제한/잡힘/식사 우선/20분 고정 확인. 로컬 javac 미설치로 로컬 검사 실행 불가; CI 검사 성공으로 기록.
+- Android 메뉴·더블탭 깨우기 소비/음식 터치/방 숨김·HUD 전환·잠금 복귀·설정 반영은 해당 코드 흐름 검토. 합성 PNG에서 얼굴 방향·머리 크기·말풍선 겹침 육안 확인. 실기기 UI 검증으로 표현하지 않음.
+- 산출물 ZIP SHA-25678e9253ef9c95be82492556b51c587f8360ef61cd6028dcf27c41adaa49a369a 일치. APK v2 서명 및 콘텐츠 digest 암호학적으로 검증,33과 인증서 SHA-256 b1b7fe19f0a737c57a9e23ab76f8e4e9fa75e71e4c5bcbc405af05d82db8f21a 동일. 기존 그림/음식 소재 전부33과 바이트 동일, 새 수면/말풍선/character.json 소스와 바이트 동일.
+- APK SHA-256 d3431023931c60945171b79864307f54ae6f622668e24dbe48dad54c97b0f7ff, 공개 Git blob101f3bd342defaa5bea87f63f95dcc478fd9a2fd 일치. APK 먼저 게시 후 latest.json34 갱신.
+- APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-34.apk . 사용자 실기기 확인 대기: 수면1·zzZ 위치/크기/호흡, 깨우기 첫 터치·연속 탭·드래그, 고정 만료/무제한, 식사 요청/급식, 설정1~20분/OFF, 잠금 복귀/재시작/방-HUD 전환. 1분 대기로 빠른 시험 가능. 수면2 추가는 실제 결과 후 판단.
