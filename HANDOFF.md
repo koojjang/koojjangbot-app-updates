@@ -28,7 +28,7 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.32 / versionCode 32.
+현재 공개 배포: 0.1.33 / versionCode 33.
 
 최신 햄버거 모션 배포 정보는 마지막 배포 결과 절 참조. 식사 GUI 정보는19절 참조. 이어지는 0.1.28 항목은 직전 배포 기록이다.
 
@@ -338,3 +338,15 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - APK SHA-256 fd0d347ed3897d900a76ac023c3c0d31915c964d1528a71a2db33a3cbb539366, 공개 blob d2f4d2f9196f13909d4eb693f333575112f9fc35 검증. APK 먼저 게시 후 latest.json 갱신.
 - APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-32.apk . 실기기 햄버거 표시/크기/전환·잡힘 재개는 사용자 확인 대기.
 - 다음 이어갈 지점: 밥1/2 자세를 사용자와 확정해 스탠딩1 기준 한 장씩 생성/채택 후 추가. 햄버거는 추가 채택 질문 없이 완료.
+
+### 밥 모션·HUD 단일 표시 배포 결과 · 2026-10-06 / 0.1.33
+
+- 상태: 구현·검증·배포 완료. 식사밥1/2 모두 사용자 채택. 밥0=밥1/2, 햄버거1=버거1/2, 젖병2=젖병1/2. 음식별 렌더러/그림 토큰 분리, 기존 공유 시계·음식 저장 유지.
+- 밥 원본 art/kkyujjang/meals/rice-meal-1-source.png 및 rice-meal-2-source.png 각각1199×1312 RGBA 보존. 원본 blob05e0a34431b33c2d8d42955f71b9b7b9cf485f59 / bc9b6462f85daa8f63ebb6c34757026d2e1d050b. 공통scale289/927,374×409,x6/y106로384×512 lossless WebP,alpha/색 유지,anchor .5/.985. 발끝503/502px, 앉은 높이는 자연스럽게 유지. 2에 음표 말풍선 포함.
+- RoomView는 실제 OverlayService.active를 프레임/터치/복귀 때 확인. HUD 활성 시 방 캐릭터·그림자·급식 말풍선 숨김, 터치 취소, 방의 visible/held 등록 해제·행동 멈춤. HUD 해제 시 방 표시 복귀. 배경·성장 패널·설정 유지. 서비스 실패/권한 해제/알림 끄기에서도 실제 active=false로 복귀. 방과 HUD의 위치·앉기 상태를 이관하는 변경은 아님.
+- 식사30초/500ms, 잡힘/숨김 일시정지 및 재개,8시간/테스트1분·경험치·랜덤 요청 유지. 숨겨진 방은 식사 시간을 별도로 진행하거나 HUD 잡힘을 방해하지 않음.
+- 기능 커밋1a1757c0d68734c6cd130453599956fcc9db7630. CI https://github.com/koojjang/koojjangbot-app/actions/runs/37427124533 (run33) 행동 검사·assembleDebug·lintDebug 모두 성공. 음식/시계 기존MealCheck 회귀 통과. RoomView HUD 분기의그림/터치/visible·held 정리와resume/pause 코드를 검토. Android UI 실기기 전환 테스트는 사용자 확인 대기.
+- 산출물 ZIP SHA-256 b95f836ff590e8699c56e74154625f81cb1de50ad96c6735dedec6d4991034d3 검증. 실제 APK com.koojjang.app/versionCode33/versionName0.1.33,32와 서명 동일. 기존 소재 모두 바이트 동일, 새 밥 그림/JSON 소스와 동일 검증.
+- APK SHA-256 733c334965293b26693fb959e598df9e8d66581b05180c885a65367f5bc3560b, 공개blob0a01a207ad830115a056977ab89ebd1a0750fba0 일치. APK 게시 후latest.json 갱신.
+- APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-33.apk . 실기기 밥 크기/전환·HUD 켜기/끄기·재진입·알림 종료 확인 대기. 사용자 햄버거0.1.32 결과 만족 확인.
+- 다음 작업: 사용자 실기기 피드백. 승인 없이 새 미술/기능 추가 없음.
