@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 29,
-  "versionName": "0.1.29",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-29.apk",
-  "releaseNotes": "식사·성장 시스템을 추가했어요. 밥·햄버거 세트·우유 젖병을 고르면 젖병 2프레임이 0.5초마다 바뀌며 30초 동안 먹어요. 드래그 중에는 잡힘으로 멈췄다가 놓으면 남은 식사를 이어가요. 쿠짱의 방에서 식사 테스트 모드(1분 간격)를 켤 수 있어요.",
-  "sha256": "e7d24693861c1afd6b855ebb7c7f68c3edcb2c18658e86e4b6cede6e87c2a129"
+  "versionCode": 30,
+  "versionName": "0.1.30",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-30.apk",
+  "releaseNotes": "식사 요청을 귀여운 핑크 크레파스 말풍선으로 바꿨어요. 흰 말풍선 안에 밥·햄버거·젖병 중 하나만 랜덤으로 표시하고, 음식 아이콘을 이전보다 20% 줄였어요. 말풍선을 누르면 기존 30초 젖병 식사 모션이 시작돼요.",
+  "sha256": "f1958ac8cce307324cad8c011581dbbabad51cf798c689580e9c7993909f3da6"
 }
