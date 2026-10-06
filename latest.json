@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 25,
-  "versionName": "0.1.25",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-25.apk",
-  "releaseNotes": "메뉴를 열면 쿠짱이 메뉴 쪽을 바라봅니다. 탭 대기시간을 20% 줄이고 메뉴 높이를 48dp로 조절했습니다.",
-  "sha256": "3bc058ba4e5edb36e153fa7e449046660cf5563c0f5fe4de90e563647765c3d1"
+  "versionCode": 26,
+  "versionName": "0.1.26",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-26.apk",
+  "releaseNotes": "키보드가 열리면 쿠짱의 활동 영역을 줄여 키보드 위에서 움직이도록 했습니다. 키보드를 닫으면 같은 비율의 위치로 부드럽게 돌아옵니다.",
+  "sha256": "f8ad84a278c760e0c788d3e3448b23c5dfe23dab34367f710c2957047ee0e4d6"
 }

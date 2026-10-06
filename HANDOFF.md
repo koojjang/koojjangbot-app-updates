@@ -16,12 +16,12 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.25 / versionCode 25.
+현재 공개 배포: 0.1.26 / versionCode 26.
 
-- 소스 기능·소재 커밋: b7f1a1c134530fc58a37b6273e68baeb58872100.
-- CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37404697613 (run_number 25, 성공).
-- APK: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-25.apk
-- APK SHA-256: 3bc058ba4e5edb36e153fa7e449046660cf5563c0f5fe4de90e563647765c3d1.
+- 소스 기능·소재 커밋: 4b004c7236651de95cf103a4228ee3daa2b0f90a.
+- CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37408364750 (run_number 26, 성공).
+- APK: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-26.apk
+- APK SHA-256: f8ad84a278c760e0c788d3e3448b23c5dfe23dab34367f710c2957047ee0e4d6.
 - 업데이트 정보: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/latest.json
 - 행동 검사, APK 빌드, Android lint 통과. 산출물 ZIP digest 확인, APK 안의 모든 캐릭터 WebP와 로컬 채택 소재가 바이트 단위로 같은지 확인했다.
 - 0.1.20의 새 앉기 그림은 사용자 승인 후 배포했다. 사용자가 0.1.20 앉기 전환이 실제 폰에서도 자연스럽다고 확인했다. 빌드 성공을 실기기 성공으로 표현하지 않는다.
@@ -232,3 +232,16 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - APK 0.1.25/versionCode25/com.koojjang.app, 기존 서명 일치. 메뉴1이 승인 변환 소재와 바이트 동일, 기존 행동 그림·아이콘 동일.
 - artifact sha256:86a7aa3e24f837ac815fecd65f3367815abd48df9a561f932fc4c68d82b64cdf, 공개 APK blob 968ab29ac1a74eb37e86b062d7952537a4e51f10, 검증 산출물과 일치. APK 게시 후 latest.json 갱신.
 - 실기기 메뉴 자세/크기·단축한 탭 반응 및 더블탭 조작 확인 대기.
+
+
+## 15. 키보드 회피 시도 · 2026-10-06 / 0.1.26
+
+- 사용자 요청: 키보드가 나오면 HUD 활동 영역을 줄이고 현재 위치·걷기 목적지의 비율(0~1) 유지. 영역 변화는 걷기 모션 대신 현재 자세 그대로 짧게 부드럽게 이동.
+- API30+ WindowManager.getCurrentWindowMetrics의 전체 영역 IME visible/bottom을 표시 중150ms 간격으로 조회. 작은 캐릭터 창의 local inset을 전체 높이로 오해하지 않음. 기존 창 focus/layer 유지, 새 권한·접근성·전체화면 창 없음.
+- full screenHeight와 activityHeight 분리. 내비게이션 하단 중복 차감 방지·키보드 위8dp 여백. PetSize는 full height로 계산해 그림 크기 유지.
+- 활동 높이200ms smoothstep 전환. PetEngine x/y/tx/ty는 변경하지 않고 표시·드래그 범위만 조절. 키보드 닫으면 동일 비율 복귀. 드래그 중 영역 변화는 범위와 기준점 보정.
+- 영역 변경 시 열린 메뉴 닫음. 고정 제한시간은 유지. 영역 변화 때문에 서기/앉기/하품/기지개를 바꾸지 않음.
+- API26~29는 기존 영역 유지. 바닥에 붙은 키보드 대상으로 floating keyboard는 bottom inset이 없으면 회피하지 않음.
+- HudAreaCheck: 영역 계산·비율 위치 복귀·부드러운 이동·하단 경계 검증. CI 37408364750: 행동 검사·assembleDebug/lintDebug 성공.
+- APK 0.1.26/versionCode26/com.koojjang.app, 기존 서명 및 모든 캐릭터/아이콘 소재 동일. ZIP sha256:6d757a6dedb7e2a362e097f3d8e8eb40973f11a8d097f55fa0a88076a3175a0f, APK blob 4fd4e528974670109f04080eed808bc9cedbf28f 검증.
+- 기기별 IME 전달 및 실제 키보드 열림/닫힘 회피는 사용자 테스트 대기. 변경 시 Logcat KoojjangHud에 keyboard/imeBottom/availableHeight 기록. 입력 텍스트는 읽지 않음.
