@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 33,
-  "versionName": "0.1.33",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-33.apk",
-  "releaseNotes": "밥 급식에 식사밥1·2를 추가했어요. 음식마다 전용 모션이 0.5초씩 교차하며 30초 식사와 잡힘 일시정지·재개를 유지합니다. HUD를 켜면 방의 쿠짱은 숨겨 한 명만 보이고, HUD를 끄면 방으로 돌아옵니다.",
-  "sha256": "733c334965293b26693fb959e598df9e8d66581b05180c885a65367f5bc3560b"
+  "versionCode": 34,
+  "versionName": "0.1.34",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-34.apk",
+  "releaseNotes": "오래 터치하지 않으면 쿠짱이 옆으로 누워 잠들어요. 수면1과 작은 zzZ 말풍선, 미세한 숨쉬기를 추가했어요. 설정에서 자동 잠들기 ON/OFF와 대기시간 1~20분을 슬라이더로 조절할 수 있어요. 고정 유지시간도 1~20분 슬라이더와 무제한으로 바꿨어요.",
+  "sha256": "d3431023931c60945171b79864307f54ae6f622668e24dbe48dad54c97b0f7ff"
 }
