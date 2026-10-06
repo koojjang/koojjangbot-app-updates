@@ -16,12 +16,12 @@
 
 ## 2. 현재 배포와 검증 수준
 
-현재 공개 배포: 0.1.22 / versionCode 22.
+현재 공개 배포: 0.1.23 / versionCode 23.
 
-- 소스 기능·소재 커밋: bbb7426417dd53010f385a7d4f6fc2762f564db2.
-- CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37355034680 (run_number 22, 성공).
-- APK: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-22.apk
-- APK SHA-256: 36a4ab6a2d4f740ffed0f9e810861e812dc37ff4ce13a40849c0ccc91bcb2336.
+- 소스 기능·소재 커밋: 0cd41a905537e9537d6918bab6c022b48d3fff1e.
+- CI 실행: https://github.com/koojjang/koojjangbot-app/actions/runs/37398265711 (run_number 23, 성공).
+- APK: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-23.apk
+- APK SHA-256: 8838f7d96c0c9776861dd577edeb877db9aa6c2fbee471031d8ea0404f8b91be.
 - 업데이트 정보: https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/latest.json
 - 행동 검사, APK 빌드, Android lint 통과. 산출물 ZIP digest 확인, APK 안의 모든 캐릭터 WebP와 로컬 채택 소재가 바이트 단위로 같은지 확인했다.
 - 0.1.20의 새 앉기 그림은 사용자 승인 후 배포했다. 사용자가 0.1.20 앉기 전환이 실제 폰에서도 자연스럽다고 확인했다. 빌드 성공을 실기기 성공으로 표현하지 않는다.
@@ -193,3 +193,15 @@ latest.json은 versionCode 숫자 비교, HTTPS·지정 배포 저장소 APK 경
 - CI 37355034680의 행동 검사, 빌드·lint 및 APK 업로드 모두 성공 확인.
 - 로컬 산출물과 공개 APK의 Git blob SHA 487cc5104f2916b08debd914b644ee5d1ccebbcc가 동일하다. versionCode 22, versionName 0.1.22, package com.koojjang.app 확인.
 - APK 안의 캐릭터 JSON과 모든 WebP의 Git blob SHA가 소스 저장소와 일치한다. 기존 서명 인증서 포함 확인. 실제 폰 덮어설치·표시 확인은 사용자 피드백 대기.
+
+
+## 12. 앱 이름·아이콘 변경 · 2026-10-06 / 0.1.23
+
+- 사용자 실기기 확인: 0.1.22 하품·기지개 정상 작동.
+- 앱 이름은 쿠짱 키우기. 홈 화면·Android 앱/권한 화면·앱 내부 제목과 안내를 변경.
+- 사용자 제공 11836.png (388×388) 원본 그대로 아이콘으로 채택. 원본 art/launcher/launcher-source.png, 앱 drawable-nodpi/launcher_art.png. AI 재생성·리터치 없음.
+- legacy mdpi~xxxhdpi PNG 및 adaptive icon. 108dp 레이어에 18dp inset으로 72dp 그림 배치, 배경 #F2E4EB. 기기 마스크에 따라 가장자리 일부가 잘릴 수 있음.
+- package com.koojjang.app, 기존 서명 인증서 일치. 설정 저장 이름·키 유지, 기존 행동 소재 바이트 단위 동일.
+- CI run 37398265711: 행동 검사, assembleDebug/lintDebug 성공. APK versionCode=23/versionName=0.1.23, 이름 리소스 및 아이콘 원본 포함 확인.
+- artifact ZIP digest dd629539e00dc862eca341b08cfa7e6fcddabb6d86b1f89cb702c36419a24fe2 확인. 공개 APK blob 26f4706850f9eb9c7f3d205b8c48a8d913fbc396, 검증한 APK와 동일. APK 먼저 게시 후 latest.json 갱신.
+- 0.1.23 이름·아이콘의 실기기 표시 및 실제 덮어설치 확인은 사용자 피드백 대기.

@@ -1,4 +1,4 @@
-# 쿠짱의 방 업데이트
+# 쿠짱 키우기 업데이트
 
 공개 APK, 최신 버전 정보 및 새 개발 대화를 위한 인계문을 보관합니다.
 
@@ -10,13 +10,15 @@
 
 ## 현재 배포
 
-현재 공개 버전: **0.1.22 (versionCode 22)**. 이후 최신 버전의 기준은 [latest.json](latest.json)입니다. 최신 CI 실행 번호와 공개 배포 버전은 다를 수 있습니다.
+현재 공개 버전: **0.1.23 (versionCode 23)**. 이후 최신 버전의 기준은 [latest.json](latest.json)입니다. 최신 CI 실행 번호와 공개 배포 버전은 다를 수 있습니다.
 
-[0.1.22 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-22.apk)
+[0.1.23 APK 다운로드](https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-23.apk)
 
 앱은 실행 시와 설정의 **업데이트 확인** 버튼으로 latest.json을 확인합니다. 새 버전이 있으면 다운로드 안내가 표시됩니다. 다운로드 후 Android 설치 화면에서 직접 설치합니다. 같은 버전에서는 수동 확인 시 최신 버전이라고 표시됩니다.
 
 ## 변경 이력
+
+- 0.1.23: 앱 이름 쿠짱 키우기, 사용자 제공 일러스트로 앱 아이콘 변경. 빌드·검사 및 기존 서명 호환 확인. 실기기 아이콘 확인 대기.
 
 - 0.1.14: 설정 → 크기 조절50~150%, 기본 크기 복귀 및 자동 저장.
 - 0.1.15: 폰 화면에 띄우기, 표시 권한, 드래그, 앱/알림에서 종료.
