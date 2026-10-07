@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 35,
-  "versionName": "0.1.35",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-35.apk",
-  "releaseNotes": "수면 zzZ 말풍선을 후드 바깥으로 옮겼어요. 머리와 몸에 겹치지 않고 조금 떨어진 공중에 뜨며, 꼬리가 후드 쪽을 향합니다. 그림·색감·크기와 기존 수면 동작은 유지합니다.",
-  "sha256": "a5fb13616e1bfb0c262f201f816e436aa2f6e096689e044c75a2c8882352fba9"
+  "versionCode": 38,
+  "versionName": "0.1.38",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-38.apk",
+  "releaseNotes": "HUD 좌우 끝에 쿠짱을 수납할 수 있어요. 수납 중 깜빡임·자동 수면과 급식 후 원래 자리 복귀를 추가했어요. 원탭 메뉴에서 레벨·경험치바·다음 식사 시간을 확인할 수 있어요.",
+  "sha256": "6fcf046583e93e308c840a5f9a0aaef1f43af07783874c751b0b876160dad5fe"
 }
