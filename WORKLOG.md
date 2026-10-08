@@ -1,5 +1,12 @@
 # 쿠짱 앱 현재 진행상황 및 작업 기록
 
+## 상태 표시·활동 설명 구현 및 로컬 검사 완료 · 2026-10-08
+- 기능 커밋 b988c5b3a4e20926f8c857b5fc8fd1c1bd6cd137. CareDisplay/CarePanel 공통 적용, MainActivity 설정2종·선택즉시저장, 패널 attach/detach 리스너로 실제HUD·방실제·테스트의 열린메뉴 즉시갱신. 미설정/잘못된값 기본1(게이지와상태/간단설명).
+- 9조합 표시/행복 예외·이름/문구·비용/불가이유·공통애정설명·자연어 장단점 및 ID별 실행효과 검사 통과. 기존16행동검사 통과. 핵심 CareState/CareStore/GrowthStore/RoomView/OverlayService 및 미술 변경없음.
+- 상태만은 같은 구간색을 라벨에 적용. 긴 버튼 wrap_content/최소48dp·여백/개행, 설정창 ScrollView, 기존HUD 화면범위clamp/ScrollView 유지. 저장키는 MainActivity 공유preferences의 careStatusDisplay/careActionDescription, 육성저장키와독립. 리스너정리·필수정보·공통패널·동일색·배치 코드검토 통과; Android실행/실기기 검증은 아님.
+- CI44 https://github.com/koojjang/koojjangbot-app/actions/runs/37752985522 : 행동검사 성공, assembleDebug/lintDebug 진행중. APK미배포/latest43 유지. 다음 성공APK 내부버전/기존서명/v2digest/기존소재/해시 확인 후 게시·latest전환·완료인계. 실기기9조합/큰글자/가장자리/재시작 확인대기.
+
+
 ## 상태 표시·활동 설명 설정 작업 시작 · 2026-10-08 17:49 KST
 - 기준: 최신 배포0.1.43, 현재 표시 코드만 수정. 상태 표시3종(수치/게이지와 상태/상태만), 활동 설명3종(수치/간단한 설명/없음)을 독립 저장. 미설정 기본값은 게이지와 상태+간단한 설명.
 - 실제 HUD 원탭·하위메뉴/방 실제·테스트 공통 적용, 열린 화면 즉시 갱신. 5상태 이름 유지·상태만 문구에 기존 구간색. 행복/레벨/성장값·돌봄/비용·활동/경고·취침/남은시간·불가사유 항상 표시.
