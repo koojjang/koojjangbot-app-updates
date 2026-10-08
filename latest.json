@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 42,
-  "versionName": "0.1.42",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-42.apk",
-  "releaseNotes": "활동 시간이 16시간을 넘으면 돌봄 지급을 멈추고 수면 부족 페널티가 적용돼요. 충분한 지정 취침 8시간을 실제로 채워야 활동 시간이 초기화돼요. 중간에 깨워도 이미 잔 시간은 인정하며 남은 시간만 다시 재울 수 있어요. 테스트 초기값을 중간 상태와 돌봄 4개로 변경했어요.",
-  "sha256": "110a6a516a14d687501f9797ae0a37949c0a9c32c880771561981b2a7c2595e2"
+  "versionCode": 43,
+  "versionName": "0.1.43",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-43.apk",
+  "releaseNotes": "돌봄 최대 8개와 최신 테스트 밸런스를 적용했어요. 16시간부터 지급 중단과 단계적 수면 부족 페널티, 18시간에 8시간 자동 취침이 시작돼요. 지정 취침의 중간 깨우기와 비몽사몽을 없앴어요. 기존 성장과 상태, 돌봄 이월은 유지돼요.",
+  "sha256": "ab99caa05317fc105ce69f18368691f3cbc89386d845634ef7266aaccc2c7eb3"
 }
