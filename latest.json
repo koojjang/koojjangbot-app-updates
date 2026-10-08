@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 44,
-  "versionName": "0.1.44",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-44.apk",
-  "releaseNotes": "상태 표시와 활동 설명을 각각 선택할 수 있어요. 기본은 게이지와 상태·간단한 설명이며 실제 HUD와 쿠짱의방, 테스트에 함께 적용돼요. 식사는 햄버거·밥·분유 순서로 표시돼요. 기존 돌봄 수치와 육성 규칙은 그대로예요.",
-  "sha256": "f291ac4342f3378699c54c7d323d88791c3106fe036f0b1ee0f67c1ec586511d"
+  "versionCode": 45,
+  "versionName": "0.1.45",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-45.apk",
+  "releaseNotes": "위생과 씻기(목욕·세수·손씻기)를 추가했어요. 돌봄은 최대100, 활동 중 5게임분마다1 충전되며 행동별 비용8·12·18과 60게임분 쿨다운을 적용해요. 휴식은 최신 수정안, 모든 행동 애정+7을 사용해요. 기존 상태·레벨·성장을 보존하고 기존 돌봄은12배로 이관해요. 표시 설정은 실제HUD·쿠짱의방·테스트에 함께 적용돼요.",
+  "sha256": "2ee42b9dfbc81c2edd9829e27dd1b108f499f1cf33bc3e76d41878647e92e813"
 }
