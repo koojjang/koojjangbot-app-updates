@@ -1,5 +1,11 @@
 # 쿠짱 앱 현재 진행상황 및 작업 기록
 
+## 위생 세분화 코드 커밋·CI45 진행 · 2026-10-08
+- 기능커밋 82aca7e3ae516c2e98f9b3a9b6c65ee26efbb386, CI https://github.com/koojjang/koojjangbot-app/actions/runs/37774500853 (run45). 로컬18검사 재통과, 추가 씻기3종의 단일효과/10초연출/잡힘·숨김정지/HUD전환·수납복귀/게임일시정지쿨다운 검사 포함.
+- 공통 CarePanel/CareDisplay를 실제HUD·방실제·테스트가 재사용, OverlayService/RoomView/GrowthStore/PetRenderer/HudStorage 및승인assets 코드/바이트 미수정. 기존 ScrollView와 화면경계clamp 재사용, Android실측과구분.
+- 다음은 CI행동검사·assembleDebug/lintDebug 성공확인→APK내부버전·기존서명·v2digest·assets·해시검증→게시/latest전환. latest44 유지, 실기기미확인.
+
+
 ## 위생 세분화 구현·로컬 검사 완료 / CI·배포 대기 · 2026-10-08
 - 공통엔진 위생/행복/건강 연결, 채택12효과+휴식수정/비용8·12·18/애정7,cap100/5분충전/개별60분쿨다운 완료. 공통패널 건강아래위생/식사아래씻기·표시9조합/불가사유 적용. 기존승인소재의 앉기 임시연출.
 - schema4: V1~V3 원본백업/기존돌봄12배cap100/위생65/쿨다운가능/다른상태·성장·취침·연출보존. V4 재시작 중복변환없음.
