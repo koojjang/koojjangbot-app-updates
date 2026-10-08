@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 43,
-  "versionName": "0.1.43",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-43.apk",
-  "releaseNotes": "돌봄 최대 8개와 최신 테스트 밸런스를 적용했어요. 16시간부터 지급 중단과 단계적 수면 부족 페널티, 18시간에 8시간 자동 취침이 시작돼요. 지정 취침의 중간 깨우기와 비몽사몽을 없앴어요. 기존 성장과 상태, 돌봄 이월은 유지돼요.",
-  "sha256": "ab99caa05317fc105ce69f18368691f3cbc89386d845634ef7266aaccc2c7eb3"
+  "versionCode": 44,
+  "versionName": "0.1.44",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-44.apk",
+  "releaseNotes": "상태 표시와 활동 설명을 각각 선택할 수 있어요. 기본은 게이지와 상태·간단한 설명이며 실제 HUD와 쿠짱의방, 테스트에 함께 적용돼요. 식사는 햄버거·밥·분유 순서로 표시돼요. 기존 돌봄 수치와 육성 규칙은 그대로예요.",
+  "sha256": "f291ac4342f3378699c54c7d323d88791c3106fe036f0b1ee0f67c1ec586511d"
 }
