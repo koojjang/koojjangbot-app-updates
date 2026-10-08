@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 38,
-  "versionName": "0.1.38",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-38.apk",
-  "releaseNotes": "HUD 좌우 끝에 쿠짱을 수납할 수 있어요. 수납 중 깜빡임·자동 수면과 급식 후 원래 자리 복귀를 추가했어요. 원탭 메뉴에서 레벨·경험치바·다음 식사 시간을 확인할 수 있어요.",
-  "sha256": "6fcf046583e93e308c840a5f9a0aaef1f43af07783874c751b0b876160dad5fe"
+  "versionCode": 41,
+  "versionName": "0.1.41",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-41.apk",
+  "releaseNotes": "돌봄·행복 기반 성장과 8시간 취침·비몽사몽을 추가했어요. HUD 메뉴에서 상태 확인과 놀이·휴식·식사를 선택할 수 있어요. 쿠짱의방에서 실제 상태와 분리된 60배 테스트·시간 넘기기를 사용할 수 있어요. 기존 레벨과 진행률은 한 번 이관됩니다.",
+  "sha256": "a80316d24949db4c24c38db32a2b0e35b27d2b491a7eba97a4125094c3d54ccb"
 }
