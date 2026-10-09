@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 47,
-  "versionName": "0.1.47",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-47.apk",
-  "releaseNotes": "야외활동·인형놀이·그림그리기·음악듣기·쓰다듬기·목욕·세수·손씻기에 전용 2프레임 모션을 적용했어요. HUD·쿠짱의방·테스트에서 0.5초마다 교차하며, 기존 행동 시간과 돌봄 수치는 유지돼요. 그림 크기·바닥을 맞추고 넓은 소품의 HUD 잘림을 보정했어요. 음식과 낮잠은 기존 그림을 유지해요.",
-  "sha256": "78018062d379da7e293e015f7f5375dd579f91ab8ec2ac203c5337f22f342239"
+  "versionCode": 49,
+  "versionName": "0.1.49",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-49.apk",
+  "releaseNotes": "행복은 상단에 두고 나머지 상태를 애정·기분 / 건강·위생 / 피로·포만감의 2열·3행으로 정리했어요. HUD 메뉴는 내용 높이에 맞춰 짧아지고, 쿠짱의방 공통 상태 패널에도 적용돼요. 큰 글자는 줄바꿈되며 화면을 넘으면 스크롤해요. 표시 설정과 돌봄 수치·행동 모션은 유지돼요.",
+  "sha256": "7cee5a8ff4bbf43882163789c8df682316512b7ecf62848a1e1ead24b8bcb5b1"
 }
