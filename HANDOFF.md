@@ -1,5 +1,13 @@
 # 쿠짱 앱 개발 인계문
 
+## 상태 게이지 2열 배치 배포 완료 · 2026-10-09 / 0.1.49
+- 앞선2열배치보류는이번사용자요청으로해결. 행복상단전체폭, 아래 애정|기분 / 건강|위생 / 피로|포만감 2열3행. CarePanel 라벨행/게이지행 분리·동일열폭·12dp열간격·자동줄바꿈/가변높이로 긴상태명과큰글자 잘림방지. 공통패널사용으로 실제HUD·쿠짱의방실제/테스트 동일적용.
+- OverlayService HUD메뉴를현재폭에서내용측정후높이에맞춤(기존590dp/화면높이상한유지), 넘는내용은기존ScrollView. 상태표시3모드 숫자/게이지/상태명·색·갱신정책 유지. 행복기존표시정책유지. 수치/시간/성장/저장/모션 변경없음.
+- 배치커밋3fc83841ad7ac90c4d8bfba74e83a5fd69c71e49 + HUD높이453a077e9f26993105cd68198a91ed93b2650a62. CI49 https://github.com/koojjang/koojjangbot-app/actions/runs/37872306204 기존행동19검사·assembleDebug·lintDebug 성공. 중간48미배포. 간단GUI변경으로새테스트추가없음.
+- 산출물ZIP SHA256 8cb6bd252caba0bffc23deec9a8c8f95cb489d12e874a42b5f0d7b568bd06422 확인. 실제APK com.koojjang.app/versionCode49/versionName0.1.49. v2서명/콘텐츠digest 검증·47동일인증서. 기존캐릭터소재/character.json41개47과바이트동일.
+- APK SHA256 7cee5a8ff4bbf43882163789c8df682316512b7ecf62848a1e1ead24b8bcb5b1, Gitblob1bf5f0dbe1275e421072132a764351e7d1783eb6. APK게시후공개다운로드hash일치확인·latest49갱신.
+- APK https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-49.apk . 실기기未검증: 작은화면/큰시스템글자·3표시모드/위생긴상태명·HUD하위메뉴스크롤·방패널 실제사용확인사용자후속. 자동줄바꿈/가변높이 코드검토와실기기검증을구분.
+
 ## 돌봄 행동 모션 적용 배포 완료 · 2026-10-09 / 0.1.47
 - 대화초과 후 재개하여 최종 APK 게시/latest 갱신 완료. 기능 ec221082dd84d1fa2a30bd4ff3418005e5264457 + 외곽선보정 d4e90cfc1292a63f7b8bd25eb2ba46bd872c34ad. CI47 https://github.com/koojjang/koojjangbot-app/actions/runs/37869559854 행동19검사·assembleDebug·lintDebug 성공. 중간46 미배포.
 - 야외/인형/그림/음악/쓰다듬기/목욕/세수/손씻기 8종16프레임을 실제HUD·방·테스트에500ms교차 적용. 기존10현실초 행동/잡힘·숨김 일시정지·재개/수납복귀/수치·쿨다운·수급·성장·취침 유지. 음식3종/낮잠은기존그림. 2열게이지 별도보류.
