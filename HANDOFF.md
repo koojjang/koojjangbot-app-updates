@@ -1,5 +1,14 @@
 # 쿠짱 앱 개발 인계문
 
+## 돌봄 행동 모션 적용 배포 완료 · 2026-10-09 / 0.1.47
+- 대화초과 후 재개하여 최종 APK 게시/latest 갱신 완료. 기능 ec221082dd84d1fa2a30bd4ff3418005e5264457 + 외곽선보정 d4e90cfc1292a63f7b8bd25eb2ba46bd872c34ad. CI47 https://github.com/koojjang/koojjangbot-app/actions/runs/37869559854 행동19검사·assembleDebug·lintDebug 성공. 중간46 미배포.
+- 야외/인형/그림/음악/쓰다듬기/목욕/세수/손씻기 8종16프레임을 실제HUD·방·테스트에500ms교차 적용. 기존10현실초 행동/잡힘·숨김 일시정지·재개/수납복귀/수치·쿨다운·수급·성장·취침 유지. 음식3종/낮잠은기존그림. 2열게이지 별도보류.
+- 원본보존/공통canvas·pair스케일·앵커/투명lossless16소재. 그림2 높이1px차는패딩흡수, 고정색차·미세드리프트는재채색없이유지(픽셀동일완료아님). 이전로컬HUD크기/density/좌우클리핑검사통과 기록 유지.
+- CI ZIP SHA256 032c3daf6e998d689ae24355afa40b1433253f83cc7541f8a89233216e3f3e16 확인. 실제APK package com.koojjang.app/versionCode47/versionName0.1.47. v2 RSA서명·전체콘텐츠digest 검증,45와동일 인증서SHA256 b1b7fe19f0a737c57a9e23ab76f8e4e9fa75e71e4c5bcbc405af05d82db8f21a.
+- APK16새소재 SHA256 모두 source asset-transforms.json 일치/character.json 구조일치/기존24소재45와바이트동일. APK SHA256 78018062d379da7e293e015f7f5375dd579f91ab8ec2ac203c5337f22f342239, Gitblob22afb8ae19bf0294257a276665effb4804770ca7 로컬/공개일치.
+- APK먼저게시·공개다운로드hash검증후latest47갱신. URL https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-47.apk .
+- 실기기미검증: 사용자75%등크기에서8행동소품/발바닥/프레임색감, HUD좌우끝·드래그/남은행동재개·수납복귀·방/테스트확인 필요. 빌드/자동검사와실기기검증 구분. 새미술/밸런스 변경없음.
+
 ## 돌봄 미술 원본 백업 완료 · 2026-10-09
 - 이전 09:38 KST 백업중 기록은 이 절로 완료 처리. 대화 길이 제한 후 다음 대화에서 원본20장 회수하여 GitHub게시 완료.
 - 소스 백업커밋 8ddcaa905c16156a728172f70a32bb6828cf2b08. 영구경로: https://github.com/koojjang/koojjangbot-app/tree/main/art/kkyujjang/care-20261009 . README.md 사용목록/상태, manifest.json 원제목·출처·크기·SHA-256/GitblobSHA 기록.
