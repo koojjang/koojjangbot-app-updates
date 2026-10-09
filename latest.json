@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "versionCode": 49,
-  "versionName": "0.1.49",
-  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-49.apk",
-  "releaseNotes": "행복은 상단에 두고 나머지 상태를 애정·기분 / 건강·위생 / 피로·포만감의 2열·3행으로 정리했어요. HUD 메뉴는 내용 높이에 맞춰 짧아지고, 쿠짱의방 공통 상태 패널에도 적용돼요. 큰 글자는 줄바꿈되며 화면을 넘으면 스크롤해요. 표시 설정과 돌봄 수치·행동 모션은 유지돼요.",
-  "sha256": "7cee5a8ff4bbf43882163789c8df682316512b7ecf62848a1e1ead24b8bcb5b1"
+  "versionCode": 51,
+  "versionName": "0.1.51",
+  "apkUrl": "https://raw.githubusercontent.com/koojjang/koojjangbot-app-updates/main/apks/kkyujjang-51.apk",
+  "releaseNotes": "16시간부터 서기·앉기·수납이 졸린 모습으로 바뀌고 기존 규칙으로 눈을 깜빡여요. 돌봄은 기상 후 14시간 동안 시간당 14씩 충전하며, 18시간부터 수면 부족 감점, 20시간에는 8시간 자동 취침해요. 행복 영역을 누르면 하루·7일·전체 평균 행복과 돌봄 기록을 볼 수 있어요. 평균은 수면과 오프라인을 포함한 시간가중 계산이며 첫날은 부분 기록이에요. 기존 상태·돌봄·성장·쿨다운·진행 중 취침은 유지돼요.",
+  "sha256": "2b1614064e2dddbdb86e5ab24868b12bbc6f9174e6b1d9791bd86798c103e2b6"
 }
