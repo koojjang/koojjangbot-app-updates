@@ -1,5 +1,9 @@
 # 쿠짱 앱 현재 진행상황 및 작업 기록
 
+## 돌봄 프레임 배포 마무리 재개 · 2026-10-09
+- 사용자 대화초과 후 이어서 완료 요청. 구현/외곽선 보정 d4e90cf 완료, CI47(37869559854)의 행동검사·assembleDebug·lintDebug 성공 확인. 공개 latest는 아직45.
+- 남은 작업: CI47 산출물 ZIP digest·APK 실제버전/서명·16소재 검증, APK 게시 후 latest 갱신, 양쪽 WORKLOG/HANDOFF 완료 기록. 추가 미술/밸런스 변경 없음. 실기기 확인은 사용자 후속.
+
 ## 돌봄 프레임 외곽선 보정 · 2026-10-09
 - 최대150%/density2에서쓰다듬기프레임의리사이즈외곽1px가anchor504아래로나가는클리핑검사실패를찾아수정. resize후두프레임의alpha>0 union최하단을504에맞추도록공통offset계산,원본PNG보존/색·포즈재해석없음.
 - 16lossless변환재검증 및8행동×4크기×4density×좌우2방향HUD가시pixel/라벨/전체alpha바닥범위검사통과. tools/check_care_assets.py 저장.
